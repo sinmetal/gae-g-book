@@ -1,0 +1,12 @@
+application: gae-g-book
+version: 2013-01-27
+runtime: go
+api_version: go1
+
+handlers:
+- url: /style\.css
+  static_files: html/style.css
+  upload: html/style.css
+
+- url: /.*
+  script: _go_app
