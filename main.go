@@ -26,7 +26,7 @@ const inputForm = `
 <title>名前の登録</title>
 </head>
 <body>
-<form method "POST" action="write">
+<form method="POST" action="write">
 	<label>お名前<input type="text" name="name" /></label>
 	<input type="submit">
 </form>
@@ -42,7 +42,7 @@ func write(w http.ResponseWriter, r *http.Request) {
 	if r.Method != "POST" {
 		w.WriteHeader(http.StatusNotFound)
 		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
-		fmt.Fprintf(w, "Not Fount")
+		fmt.Fprintf(w, "Not Found")
 		return
 	}
 
